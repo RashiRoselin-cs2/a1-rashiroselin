@@ -78,6 +78,27 @@
     </ul>
   </body>
   <footer>
-    <p>Made for CS4241</p>
+    <p><button onclick="square()">Animation test</button></p> 
+    <div id ="container">
+      <div id ="animate"></div>
+    </div>
+    <script>
+    function square() {
+      let id = null;
+      const elem = document.getElementById("animate");   
+      let pos = 0;
+      clearInterval(id);
+      id = setInterval(frame, 5);
+      function frame() {
+        if (pos == 345) {
+          clearInterval(id);
+        } else {
+          pos++; 
+          elem.style.top = pos + "px"; 
+          elem.style.left = pos + "px"; 
+        }
+      }
+    }
+    </script>
   </footer>
 </html>
