@@ -7,10 +7,10 @@ const server = http.createServer( function( request,response ) {
       sendFile( response, 'index.html' )
       break
     case '/index.html':
-      sendFile( response, 'index.html' )
+      sendFile( response, 'index.html')
       break
     case '/style.css':
-      sendFile( response, 'style.css' )
+      sendFile( response, 'style.css', 'text/css' )
       break
     case '/rashi.jpeg':
       sendFile( response, 'rashi.jpeg' )

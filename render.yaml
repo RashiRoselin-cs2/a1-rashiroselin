@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: my-static-site
-    env: static
-    headers:
-      - path: "/**/*.css"
-        headers:
-          - key: "Content-Type"
-            value: "text/css"
