@@ -8,10 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Handjet:wght,ELSH@100..900,2&display=swap" rel="stylesheet">
   </head>
-  <header>
-    <h1 class="title">CS4241 Assignment 1</h1>
-  </header>
   <body class="handjet-500">
+    <header>
+      <h1 class="title">CS4241 Assignment 1</h1>
+    </header>
     <h1 class="second-header">Information about Rashi Roselin</h1>
     <section>
       <p class="test-text">
@@ -78,29 +78,29 @@
         <li>JavaScript: I have some experience with JavaScript from my coursework at WPI and high school.</li>
       </ul>
     </article>
-  </body>
-  <footer>
-    <p><button onclick="square()">Animation</button></p> 
-    <div id ="container">
-      <div id ="animate"></div>
-    </div>
-    <script>
-    function square() {
-      let id = null;
-      const elem = document.getElementById("animate");   
-      let pos = 0;
-      clearInterval(id);
-      id = setInterval(frame, 5);
-      function frame() {
-        if (pos == 345) {
-          clearInterval(id);
-        } else {
-          pos++; 
-          elem.style.top = pos + "px"; 
-          elem.style.left = pos + "px"; 
+    <footer>
+      <p><button onclick="square()">Animation</button></p> 
+      <div id ="container">
+        <div id ="animate"></div>
+      </div>
+      <script>
+      function square() {
+        let id = null;
+        const elem = document.getElementById("animate");   
+        let pos = 0;
+        clearInterval(id);
+        id = setInterval(frame, 5);
+        function frame() {
+          if (pos == 345) {
+            clearInterval(id);
+          } else {
+            pos++; 
+            elem.style.top = pos + "px"; 
+            elem.style.left = pos + "px"; 
+          }
         }
       }
-    }
-    </script>
+      </script>
   </footer>
+  </body>
 </html>
