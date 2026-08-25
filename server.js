@@ -22,8 +22,14 @@ const server = http.createServer( function( request,response ) {
 
 server.listen( process.env.PORT || port )
 
-const sendFile = function( response, filename ) {
+const sendFile = function( response, filename, mimeType ) {
    fs.readFile( filename, function( err, content ) {
-     response.end( content, 'utf-8' )
+     if ( err ) {
+       response.writeHead( 500, { 'Content-Type': 'text/plain' } )
+       response.end( '500 Internal Server Error' )
+     } else {
+       response.writeHead( 200, { 'Content-Type': mimeType } )
+       response.end( content, 'utf-8' )
+     }
    })
 }
