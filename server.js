@@ -4,16 +4,16 @@ const http = require('http'),
 const server = http.createServer( function( request,response ) {
   switch( request.url ) {
     case '/':
-      sendFile( response, 'index.html' )
+      sendFile( response, 'index.html', 'text/html' )
       break
     case '/index.html':
-      sendFile( response, 'index.html')
+      sendFile( response, 'index.html', 'text/html' )
       break
     case '/style.css':
       sendFile( response, 'style.css', 'text/css' )
       break
     case '/rashi.jpeg':
-      sendFile( response, 'rashi.jpeg' )
+      sendFile( response, 'rashi.jpeg', 'image/jpeg' )
       break
     default:
       response.end( '404 Error: File Not Found' )
